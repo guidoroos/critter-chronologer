@@ -2,12 +2,16 @@ package com.udacity.jdnd.course3.critter;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
-import com.udacity.jdnd.course3.critter.pet.PetController;
-import com.udacity.jdnd.course3.critter.pet.PetDTO;
-import com.udacity.jdnd.course3.critter.pet.PetType;
-import com.udacity.jdnd.course3.critter.schedule.ScheduleController;
-import com.udacity.jdnd.course3.critter.schedule.ScheduleDTO;
-import com.udacity.jdnd.course3.critter.user.*;
+import com.udacity.jdnd.course3.critter.pet.controller.PetController;
+import com.udacity.jdnd.course3.critter.pet.data.PetDTO;
+import com.udacity.jdnd.course3.critter.pet.data.PetType;
+import com.udacity.jdnd.course3.critter.schedule.controller.ScheduleController;
+import com.udacity.jdnd.course3.critter.schedule.data.ScheduleDTO;
+import com.udacity.jdnd.course3.critter.user.controller.UserController;
+import com.udacity.jdnd.course3.critter.user.data.CustomerDTO;
+import com.udacity.jdnd.course3.critter.user.data.EmployeeDTO;
+import com.udacity.jdnd.course3.critter.user.data.EmployeeRequestDTO;
+import com.udacity.jdnd.course3.critter.user.data.EmployeeSkill;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +30,6 @@ import java.util.stream.IntStream;
  * Students will need to configure the application to run these tests by adding application.properties file
  * to the test/resources directory that specifies the datasource. It can run using an in-memory H2 instance
  * and should not try to re-use the same datasource used by the rest of the app.
- *
  * These tests should all pass once the project is complete.
  */
 @Transactional
